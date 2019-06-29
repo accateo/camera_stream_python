@@ -6,4 +6,4 @@ Tested with python2.7
 
 Run:
 
-python app.py
+`python app.py`
