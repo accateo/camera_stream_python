@@ -1,0 +1,63 @@
+<html>
+  <head>
+    <title>Camera webserver</title>
+	<script src="../static/jquery-1.11.1.min.js"></script>
+    <script src="../static/jquery-ui.min.js"></script>
+	<script src="../static/bootstrap.min.js"></script>
+	<link rel="stylesheet" href="../static/jquery-ui.css">
+	<link rel="stylesheet" href="../static/bootstrap.min.css">
+	<link rel="stylesheet" href="../static/font-awesome.min.css">
+	
+  </head>
+  <script>
+  
+  function takeSnapshot(){
+
+
+
+      $.ajax({
+		type: "GET",
+		url: "/video_feed/1",
+		success: function(data){
+
+
+            	},
+		error: function(data) {console.error("Error");}
+	});
+
+   }
+
+   function getBatteryData(){
+
+     $.ajax({
+		type: "GET",
+		url: "/get_battery",
+		success: function(data){
+			
+			console.log("+++++"+data["battery"]);
+
+            	},
+		error: function(data) {console.error("Error");}
+	});
+
+   }
+
+   $( function() {
+	   
+	
+	   setInterval(getBatteryData,1000);
+	   console.log("Ready");
+
+
+   });
+
+  </script>
+  <body>
+  <div class="container">
+   <br/>
+    <img src="{{ url_for('video_feed', flag='0') }}">
+    <br/><br/>
+    <button type="button" class="btn btn-primary" onclick="javascript:takeSnapshot()">Take snapshot</button>
+</div>  
+</body>
+</html>
