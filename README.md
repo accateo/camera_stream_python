@@ -7,3 +7,7 @@ Tested with python2.7
 Run:
 
 `python app.py`
+
+and open a browser (tipically Chrome) at the address
+
+`127.0.0.1:`
