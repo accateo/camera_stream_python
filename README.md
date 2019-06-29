@@ -16,7 +16,7 @@ You can cnange the port in "app.py" file.
 In the web page you'll see:
 
 
-![Alt text](img.jpg "Screenshot")
+![Alt text](Cattura.PNG "Screenshot")
 
 
 You can change the camera source editing the "camera.py" file at line:
