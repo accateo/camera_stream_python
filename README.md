@@ -10,4 +10,18 @@ Run:
 
 and open a browser (tipically Chrome) at the address
 
-`127.0.0.1:`
+`127.0.0.1:5000`
+
+You can cnange the port in "app.py" file.
+In the web page you'll see:
+
+
+
+
+
+
+
+
+You can change the camera source editing the "camera.py" file at line:
+
+`video_source = 0`
